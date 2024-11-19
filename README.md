@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Frontend - CRUD de Usuários com React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é o frontend para o gerenciamento de usuários do projeto CRUD. Ele foi desenvolvido em **React.js** e utiliza **Tailwind CSS** e **ShadCN** para estilização. A aplicação consome a API desenvolvida no backend do projeto.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Pré-requisitos**
 
-### `npm start`
+Antes de iniciar, certifique-se de ter instalado:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Node.js** (v12 ou superior)
+- **npm** (ou **yarn**)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## **Instruções de Configuração**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone o Repositório**:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd <NOME_DO_REPOSITORIO>
+   ```
 
-### `npm run build`
+2. **Instale as Dependências**:
+   Execute o seguinte comando para instalar as dependências necessárias:
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Configure o Tailwind CSS**:
+   Verifique se o arquivo `tailwind.config.js` contém a configuração correta:
+   ```javascript
+   module.exports = {
+     content: ['./src/**/*.{js,jsx}', './node_modules/@shadcn/ui/**/*.{js,jsx}'],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   };
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Inicie o Servidor de Desenvolvimento**:
+   Para iniciar o servidor de desenvolvimento, execute:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Funcionalidades**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Login**
+- Acesse a página de login em [http://localhost:3000/login](http://localhost:3000/login).
+- Faça login com um usuário existente (ex.: `admin@spsgroup.com.br`) e receba um token JWT que será salvo nos cookies para autenticação.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **Gerenciamento de Usuários**
+Após o login, acesse a página principal em [http://localhost:3000/home](http://localhost:3000/home) para:
+- **Criar Usuários**: Use o formulário para adicionar novos usuários.
+- **Editar Usuários**: Clique em "Edit" na tabela para abrir um modal com os dados do usuário e editá-los.
+- **Deletar Usuários**: Clique em "Delete" na tabela para excluir um usuário.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **Recursos Utilizados**
+- **React.js**: Biblioteca para a construção de interfaces.
+- **React Router DOM**: Gerenciamento de rotas na aplicação.
+- **Axios**: Biblioteca para chamadas HTTP.
+- **Tailwind CSS**: Framework CSS para estilização.
+- **ShadCN**: Componentes pré-estilizados para integração com Tailwind.
+- **js-cookie**: Gerenciamento de cookies para armazenar o token JWT.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## **Contato**
+Caso tenha dúvidas ou sugestões, entre em contato:
+- **Email**: jmepereira2010@gmail.com
+- **LinkedIn**: [João Marcos Esteves](https://www.linkedin.com/in/joao-marcos-esteves-pereira-a5b2b317a/)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
